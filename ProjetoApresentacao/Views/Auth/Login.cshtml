@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="main">
+
+    <div class="container">
+        <center>
+            <div class="card">
+                <div class="middle">
+                    <div id="login"> 
+                        <div class="card-body">
+
+                            @using (Html.BeginForm("LoginB", "Auth", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
+
+                                <input name="Controller" value="Adm" hidden />
+                                <div class="input-group form-group" style="margin:3px;">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="UserName" name="UserName" />
+                                </div>
+                                <div class="input-group form-group" style="margin:3px;">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Password" type="password" name="Password" />
+                                </div>
+
+
+
+                                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+
+                            }
+
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </center>
+    </div>
+
+</div>
+
+

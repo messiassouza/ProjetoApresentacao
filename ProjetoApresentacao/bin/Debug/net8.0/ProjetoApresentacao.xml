@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjetoApresentacao</name>
+    </assembly>
+    <members>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.#ctor(ProjetoApresentacao.Data.AppDbContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Construtor do controlador AuthController.
+            </summary>
+            <param name="dbContext">O contexto do banco de dados.</param>
+            <param name="config">Configurações de aplicação, incluindo chaves de autenticação.</param>
+        </member>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.Login(System.String)">
+            <summary>
+            Realiza o login do usuário e gera um token JWT.
+            </summary>
+            <param name="name">Nome do usuário.</param>
+            <returns>Redireciona para a página de produtos ou retorna um erro.</returns>
+        </member>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.GetToken(System.String)">
+            <summary>
+            Gera um token JWT para o usuário.
+            </summary>
+            <param name="name">Nome do usuário.</param>
+            <returns>Retorna o token JWT em formato JSON ou um erro.</returns>
+        </member>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.GenerateMultToken(System.Object)">
+            <summary>
+            Gera um token de múltiplas partes e realiza a autenticação do usuário.
+            </summary>
+            <param name="user">Objeto com informações do usuário (nome e função).</param>
+            <returns>Token JWT gerado.</returns>
+        </member>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.GenerateToken(System.Object)">
+            <summary>
+            Gera um token JWT para o usuário.
+            </summary>
+            <param name="user">Objeto com informações do usuário (nome e função).</param>
+            <returns>Token JWT gerado.</returns>
+        </member>
+        <member name="M:ProjetoApresentacao.Controllers.Api.AuthController.Logout">
+            <summary>
+            Efetua logout do usuário, invalidando a autenticação baseada em cookies.
+            </summary>
+            <returns>Redireciona o usuário para a ação "Index" do controlador "Home".</returns>
+            <remarks>
+            Este método assíncrono manipula a requisição HTTP GET para a rota "Logout".
+            Ele utiliza o mecanismo de autenticação baseado em cookies para fazer o logout do usuário.
+            Após a invalidação da autenticação, o usuário é redirecionado para a página inicial.
+            </remarks>
+        </member>
+        <member name="T:ProjetoApresentacao.Migrations.MIGRATION_00001">
+            <inheritdoc />
+        </member>
+        <member name="M:ProjetoApresentacao.Migrations.MIGRATION_00001.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProjetoApresentacao.Migrations.MIGRATION_00001.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProjetoApresentacao.Migrations.MIGRATION_00001.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ProdutosController">
+            <summary>
+            Controlador API para gerenciar produtos.
+            </summary>
+        </member>
+        <member name="M:ProdutosController.#ctor(ProjetoApresentacao.Data.Cache.ProdutoService)">
+            <summary>
+            Inicializa uma nova instância do controlador <see cref="T:ProdutosController"/>.
+            </summary>
+            <param name="produtoService">Instância do serviço de produtos.</param>
+        </member>
+        <member name="M:ProdutosController.Get">
+            <summary>
+            Obtém todos os produtos.
+            </summary>
+            <returns>Uma lista de produtos.</returns>
+        </member>
+        <member name="M:ProdutosController.Get(System.Int32)">
+            <summary>
+            Obtém um produto específico pelo ID.
+            </summary>
+            <param name="id">O ID do produto a ser buscado.</param>
+            <returns>O produto encontrado ou um status NotFound se não existir.</returns>
+        </member>
+        <member name="M:ProdutosController.Post(ProjetoApresentacao.Models.Produto)">
+            <summary>
+            Cria um novo produto.
+            </summary>
+            <param name="produto">O objeto produto a ser criado.</param>
+            <returns>Um status Created com a localização do novo recurso.</returns>
+        </member>
+        <member name="M:ProdutosController.Put(System.Int32,ProjetoApresentacao.Models.Produto)">
+            <summary>
+            Atualiza um produto existente.
+            </summary>
+            <param name="id">O ID do produto a ser atualizado.</param>
+            <param name="produto">O objeto produto contendo os novos dados.</param>
+            <returns>Um status NoContent se a atualização for bem-sucedida, ou BadRequest se o ID não corresponder.</returns>
+        </member>
+        <member name="M:ProdutosController.Delete(System.Int32)">
+            <summary>
+            Exclui um produto existente.
+            </summary>
+            <param name="id">O ID do produto a ser excluído.</param>
+            <returns>Um status NoContent se a exclusão for bem-sucedida.</returns>
+        </member>
+    </members>
+</doc>
