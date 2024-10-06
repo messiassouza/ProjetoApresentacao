@@ -45,12 +45,34 @@ Este projeto consiste em uma API RESTful desenvolvida em ASP.NET Core, que permi
    ```bash
    git clone https://github.com/seu_usuario/ProjetoApresentacao.git
 
-
+2. Abra no VS2022
+3. Restaure as dependências:
+  dotnet restore
+4. Atualize os dados de Banco de dados com a conectstring do seu ambiente (appsettings.json).
+  {
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*",
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=.;Database=Apresentacao;User ID=sa;Password=sql2022.;Trusted_Connection=False;Encrypt=False;"
+    },
+    "Jwt": {
+      "Key": "abcdefghijklmnopqrstuvwx123456789012", //Generate random String from https://www.random.org/strings
+      "Issuer": "http://localhost:5179", //Project Property-> Debug-> IIS-->App URL (you can local host url as well)
+      "Audience": "http://localhost:5179"
+    }
+}
+ 
 Acesse a API em http://localhost:5022.
 
 Para visualizar a documentação dos endpoints, acesse  http://localhost:5022/swagger (EXEMPLO).
 
 Tecnologias Utilizadas
+
 ASP.NET Core
 Entity Framework Core
 SQL Server
@@ -62,4 +84,6 @@ Qualidade do código (estrutura, organização e aderência às boas práticas).
 Funcionamento correto das funcionalidades solicitadas.
 Uso adequado do mecanismo de persistência.
 Documentação clara e objetiva neste README.
+
+
 
