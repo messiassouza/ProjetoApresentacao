@@ -45,3 +45,21 @@ Este projeto consiste em uma API RESTful desenvolvida em ASP.NET Core, que permi
    ```bash
    git clone https://github.com/seu_usuario/ProjetoApresentacao.git
 
+
+Acesse a API em http://localhost:5022.
+
+Para visualizar a documentação dos endpoints, acesse  http://localhost:5022/swagger (EXEMPLO).
+
+Tecnologias Utilizadas
+ASP.NET Core
+Entity Framework Core
+SQL Server
+JWT para autenticação
+Swagger para documentação da API
+xUnit para testes unitários
+Critérios de Avaliação
+Qualidade do código (estrutura, organização e aderência às boas práticas).
+Funcionamento correto das funcionalidades solicitadas.
+Uso adequado do mecanismo de persistência.
+Documentação clara e objetiva neste README.
+
